@@ -1,13 +1,24 @@
-<html>
-    <head>
-        <title> Contatos </title>
-    </head>
+{% extends "base.html" %}
 
-    <body>
-    <h1>Marcos Vinicius Novais Santos, </h1>
-    <h2>email.marcos.novais@gmail.com, </h2>
-    <h3>73988283450 </h3>
-     <a href="https://www.facebook.com/marcos.novais"> -> Visite meu Facebook </a>
-    
-    </body>
-</html>
+{% block title %} Página Inicial {% endblock%}
+
+{% block content %}
+{% for post in posts %}
+
+    <article class="post">
+        <header>
+            <div>
+                <h1>{{ post.title }}</h1>
+                <div class="about"> 
+                    By {{ post.author }} on {{ post.created.strftime('%d-%m-%Y') }}
+
+                </div>
+            </div>
+        </header>
+            <p class="body">{{ post.body }}</p>
+    </article>
+            {% if not loop.last %}
+                <hr>
+            {% endif %}
+{% endfor %}
+{% endblock %}

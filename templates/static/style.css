@@ -1,0 +1,32 @@
+html {
+    font-family: sans-serif;
+    background-color: #eeeeee;
+    padding: lrem
+}
+body{
+    max-width: 960px;
+    margin: auto;
+    background: white;
+}
+h1{
+    font-family: serif;
+    color: 3377ba8;
+    margin: lrem 0;
+}
+ht{
+    border: none;
+    border-top: 1px solid lightgray;
+}
+.content{
+    padding: 0 lrem lrem;
+}
+.post > header > div:first-of-type{
+    flex: auto;
+}
+.post .about{
+    color: slategray;
+    font-style: italic;
+}
+.post .body{
+    white-space: pre-line;
+}
